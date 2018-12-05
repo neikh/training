@@ -8,6 +8,20 @@ body{
 	background-color: #262626;
 }
 
+textarea {
+  resize: none;
+  width: 300px;
+  height: 200px;
+}
+
+hr {
+	width:70%;
+	border-top: solid 0.01em #b2d2ff;
+	margin-top: 100px;
+	opacity: 0.5;
+}
+
+
 @font-face {
     font-family: cocogoose;
     src: url(../font/cocogoose.ttf);
@@ -446,7 +460,25 @@ h2{
 }
 
 .social-stuff{
-	padding-top: 10px;
+
+}
+
+.rounded{
+	-webkit-border-radius:120px;
+    -moz-border-radius:120px;
+    border-radius:120px;
+	border: solid 3px white;
+}
+
+.bigger{
+	width: 25px;
+	font-size: 25px;
+	padding: 5px;
+}
+
+.smaller{
+	font-size: 21px;
+	padding: 8px 6px 8px 6px;
 }
 
 .low-team{
@@ -454,4 +486,92 @@ h2{
 	text-align: center;
 	padding-top: 35px;
 	line-height: 25px;
+}
+
+.body_blue{
+	height: 400px;	
+	width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	display: table;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	background-color: rgb(118,143,197); 
+}
+
+.flex-container-alt {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#contact{
+	flex: 3;
+	color: white;
+	padding-left: 40px;
+}
+
+#contact h1{
+	margin: 0;
+	padding: 0;
+}
+
+#contact p{
+	color: white;
+	font-size: 17px;
+}
+
+
+#form{
+	flex: 3;
+	text-align: center;
+}
+
+#form input, textarea{
+  width: 85%;
+  padding: 15px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: grey;
+}
+
+.empty{
+	flex: 1;
+}
+
+.bigsize{
+	flex: 6;
+}
+
+.contact-container{
+	display: table;
+	width: 100%;
+	margin-top: 40px;
+}
+
+.half-contact{
+	display: inline-block;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.element-contact{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.icon-contact{
+	font-size: 30px;
+	padding-right: 10px;
+	margin-top: -3px;
+	vertical-align: middle;
+}
+
+#footer{
+	margin-top: 30px;
+	color: white;
+	text-align: center;
 }
