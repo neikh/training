@@ -28,11 +28,12 @@ hr {
 }
 
 #header{
-	height: 600px;
-	width: 1400px;
+	width: 100%;
 	background-image: url("../images/bghead.jpg");
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 20px;
+	box-sizing: border-box;
 }
 
 #bandeau_top{
@@ -131,39 +132,37 @@ hr {
 }
 
 .body{	
-	width: 1400px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	text-align:center;
+	display:inline-block;
 	box-sizing: border-box;
-	display: table;
-	padding-bottom: 3%;
-	padding-top: 3%;
 	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .bodyAlt{	
-	width: 1400px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	text-align:center;
 	box-sizing: border-box;
-	display: table;
+	display:inline-block;
 	background-color: #F5F5F5;
-	padding-bottom: 3%;
-	padding-top: 3%;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .twotier{
 	box-sizing: border-box;
-	width: 60%;
-	height: 100%;
-	padding-left: 20%;
-	display: table-cell;
+	max-width: 550px;
+	display: inline-block;
 	vertical-align: top;
-	padding-right: 50px;
+	text-align:center;
+	padding: 15px;
 }
 
 p{
 	color: #767676;
+	text-align: justify;
 }
 
 h1{
@@ -175,58 +174,66 @@ h2{
 	margin-bottom: 0px;
 }
 
-.onetier{
-	box-sizing: border-box;
-	width: 40%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: top;
-	padding-left: 15px;
-	padding-top: 45px;
+@media screen and (min-width: 933px) {
+	 .onetier{
+		box-sizing: border-box;
+		vertical-align: top;
+		padding-top: 45px;
+		display: inline-block;
+		margin-left: 55px;
+	}
 }
 
-.onetierAlt{
-	box-sizing: border-box;
-	width: 40%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: top;
-	padding-top: 45px;
-	text-align: right;
+@media screen and (max-width: 933px) {
+	 .onetier{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 933px) {
+	 .onetierAlt{
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 45px;
+		text-align: right;
+		margin-right: 55px;
+	}
+}
+
+@media screen and (max-width: 933px) {
+	 .onetierAlt{
+		display: none;
+	}
 }
 
 .twotierAlt{
 	box-sizing: border-box;
-	width: 60%;
-	height: 100%;
-	padding-left: 5%;
-	display: table-cell;
+	max-width: 550px;
+	display: inline-block;
 	vertical-align: top;
-	padding-right: 15%;
-	text-align: left;
+	text-align:center;
+	padding: 15px;
 }
 
 .sidePartLeft{
 	box-sizing: border-box;
-	display: table-cell;
-	width: 50%;
+	display: inline-block;
+	max-width: 800px;
 	vertical-align: top;
 }
 
 .sidePartRight{
 	box-sizing: border-box;
-	display: table-cell;
-	width: 50%;
+	display: inline-block;
+	max-width: 800px;
 	vertical-align: top;
 }
 
 .element{
 	margin-top: 15px;
-	width: 100%;
+	max-width: 500px;
 	box-sizing: border-box;
-	padding-left: 30%;
-	padding-right: 10%;
-	display: table;
 }
 
 .icon{
@@ -237,19 +244,23 @@ h2{
 	width: 25%;
 }
 
+@media screen and (max-width: 540px) {
+	 .icon{
+		display: none;
+	}
+}
+
 .textContent{
 	box-sizing: border-box;
 	display: table-cell;
 	width: 75%;
+	padding: 15px;
 }
 
 .elementAlt{
 	margin-top: 15px;
-	width: 100%;
+	max-width: 500px;
 	box-sizing: border-box;
-	padding-right: 30%;
-	padding-left: 10%;
-	display: table;
 }
 
 .pcenter{
@@ -264,6 +275,7 @@ h2{
 .pcenter p{
 	margin-top: 0;
 	font-weight: bold;
+	text-align: center;
 }
 
 .clients{
@@ -290,18 +302,17 @@ h2{
 	position: relative;
 	margin-top: 35px;
 	margin-left: 15px;
-	width: 545px;
-	height: 135px;
+	margin-right: 15px;
+	max-width: 580px;
 	background: #FFFFFF;
 	border-radius: 0px;
 	border: #7E7F7F solid 1px;
 	vertical-align: middle;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding: 0px 50px 0 50px;
 	font-size: 25px;
 }
 
-.citation :after {
+.citation:after {
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -314,7 +325,7 @@ h2{
 	top: 53px;
 }
 
-.citation :before {
+.citation:before {
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -325,6 +336,18 @@ h2{
 	z-index: 0;
 	left: -16px;
 	top: 53px;
+}
+
+@media screen and (max-width: 909px) {
+	 .client_photo{
+		display: none;
+	}
+	.citation:after{
+		display: none;
+	}
+	.citation:before{
+		display: none;
+	}
 }
 
 .auteur{
@@ -338,18 +361,17 @@ h2{
 	position: relative;
 	margin-top: 35px;
 	margin-left: 15px;
-	width: 545px;
-	height: 135px;
+	margin-right: 15px;
+	max-width: 580px;
 	background: #FFFFFF;
 	border-radius: 0px;
 	border: #7E7F7F solid 1px;
 	vertical-align: middle;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding: 0px 50px 0 50px;
 	font-size: 25px;
 }
 
-.citationAlt :after {
+.citationAlt:after {
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -386,8 +408,20 @@ h2{
 	margin-left: 30px;
 }
 
+@media screen and (max-width: 909px) {
+	 .client_photo_alt{
+		display: none;
+	}
+	.citationAlt:after{
+		display: none;
+	}
+	.citationAlt:before{
+		display: none;
+	}
+}
+
 .logoCenter{
-	width: 1400px;
+	width: 100%;
 	text-align: center;
 	vertical-align: middle;
 	filter: grayscale(100%);
@@ -399,13 +433,13 @@ h2{
 
 .body_black{
 	height: 400px;	
-	width: 1400px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 	display: table;
-	padding-bottom: 3%;
-	padding-top: 3%;
+	padding-bottom: 50px;
+	padding-top: 50px;
 	background-color: black;
 }
 
@@ -423,17 +457,24 @@ h2{
 .pcenterF p{
 	margin-top: 0;
 	font-weight: bold;
+	text-align:center;
 }
 
 .flex-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  max-width: 1060px;
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .flex-container > div {
- width: 100%;
  text-align: center;
  color: white;
+ margin-right: auto;
+ margin-left: auto;
+ margin-bottom: 35px;
 }
 
 .team_photo{
@@ -483,31 +524,37 @@ h2{
 
 .low-team{
 	color: white;
-	text-align: center;
+	text-align: justify;
+    text-align-last: center;
 	padding-top: 35px;
 	line-height: 25px;
+	padding: 15px;
 }
 
 .body_blue{
-	width: 1400px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 	display: table;
-	padding-bottom: 2%;
-	padding-top: 3%;
-	background-color: rgb(118,143,197); 
+	padding-bottom: 15px;
+	padding-top: 15px;
+	background-color: rgb(118,143,197);
+	text-align:center;
 }
 
 .flex-container-alt {
-  display: flex;
-  flex-wrap: nowrap;
+	display:inline-block;
 }
 
 #contact{
-	flex: 3;
+	display:inline-block;
 	color: white;
 	padding-left: 40px;
+	max-width: 600px;
+	vertical-align:top;
+	text-align: left;
+	padding:15px;
 }
 
 #contact h1{
@@ -518,12 +565,15 @@ h2{
 #contact p{
 	color: white;
 	font-size: 17px;
+	display:inline-block;
 }
 
 
 #form{
-	flex: 3;
+	display:inline-block;
 	text-align: center;
+	max-width: 600px;
+	vertical-align:top;
 }
 
 #form input, textarea{
@@ -537,24 +587,19 @@ h2{
   color: grey;
 }
 
-.empty{
-	flex: 1;
-}
-
-.bigsize{
-	flex: 6;
-}
 
 .contact-container{
-	display: table;
-	width: 100%;
+	display:inline-block;
+	max-width: 700px;
 	margin-top: 40px;
+	text-align:center;
 }
 
 .half-contact{
-	display: table-cell;
-	width: 50%;
+	display:inline-block;
 	box-sizing: border-box;
+	text-align:left;
+	vertical-align:top;
 }
 
 .element-contact{
